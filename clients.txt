@@ -1,0 +1,7 @@
+2021-04-04 16:42:18.766030 Azaz was charged for Shipping: 110.0
+2021-04-04 16:42:57.965265 Ali was charged for Shipping: 120.0
+2021-04-04 16:43:46.902400 Hassan was charged for Shipping: 70.0
+2021-04-04 16:44:34.257144 Lashari was charged for Shipping: 57.45
+2021-04-04 16:45:44.715886 Ghoku was charged for Shipping: 543.45
+2021-04-04 16:55:30.443705 Jafri was charged for Shipping: 123.45
+2021-04-04 16:56:08.919346 Kumail was charged for Shipping: 121.45
