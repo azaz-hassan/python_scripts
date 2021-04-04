@@ -1,3 +1,6 @@
+# Azaz Hassan Jafri - BITF17M010
+
+
 from datetime import datetime
 
 
@@ -22,23 +25,6 @@ class Shipping:
     def findCountry(self, country):
         return country in self.countries
 
-    def calculateShippingRates(self, country, itemBaseValue):
-        """
-          Shipping Rate is equal to 5% of base item value multiplied by country rates.
-        """
-        return (itemBaseValue * 0.05) * self.shipping_rates[country]
-
-    def shippingDiscounts(self, totalItems, shippingRate):
-        """
-          Shipping Discount 30% if 2 to 5 items bought
-         """
-        if 6 > totalItems >= 2:
-            return (shippingRate - (shippingRate * 0.30))
-        elif totalItems == 1:
-            return 0
-        else:
-            return shippingRate
-
     def writeTransactiontoFile(self, dateTime, name, shippingRate):
         self.fin.write(
             f'{dateTime} {name} was charged for Shipping: {shippingRate}\n')
@@ -51,3 +37,20 @@ class Shipping:
 
     def closeFile(self):
         self.fin.close()
+
+
+shipping_rates = {'Azerbaijan': 3,
+                  'Belgium': 5, 'Croatia': 5, 'Deutschland': 5,
+                  'Ethiopia': 10, 'Finland': 7, 'Pakistan': 2}
+
+
+def calculateShippingRates(country, itemBaseValue):
+    """
+    >>> calculateShippingRates("Pakistan", 1000)
+    100.0
+    >>> calculateShippingRates("Azerbaijan", 1000)
+    150.0
+    >>> calculateShippingRates("Croatia", 500)
+    125.0
+    """
+    return (itemBaseValue * 0.05) * shipping_rates[country]
